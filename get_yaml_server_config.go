@@ -11,7 +11,7 @@ type ServerConfig struct {
 	Timeout float32 `yaml:"timeout" json:"timeout"`
 }
 
-func getConfig() (*ServerConfig, error) {
+func GetConfig() (*ServerConfig, error) {
 	data, err := os.ReadFile("config.yaml")
 	if err != nil {
 		return nil, err
